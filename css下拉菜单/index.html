@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		
+		.nav {
+			width: 100%;
+			margin: 0;
+		}
+		
+		.nav ul {
+			/*这里必须设置内边距和外边距，因为浏览器会给ul设定默认值，会把导航栏挤歪*/
+			padding: 0;
+			margin: 0;
+			list-style: none;
+		}
+		
+		.nav>ul>li {
+			/*本来ul是竖直排列的，对所有li元素进行float:left他就会自动全部靠左*/
+			float: left;
+			position: relative;
+		}
+		
+		.nav>ul>li {
+			padding: 10px;
+			background: goldenrod;
+			height: 40px;
+			line-height: 40px;
+			position: relative;
+		}
+		
+		.nav>ul>li:hover>ul {
+			visibility: visible;
+		}
+		
+		.nav ul ul {
+			visibility: hidden;
+			position: absolute;
+			top: 60px;
+			left: 0;
+		}
+		
+		.nav ul ul li {
+			height: 40px;
+			line-height: 40px;
+			position: relative;
+		}
+		
+		.nav ul ul ul {
+			position: absolute;
+			left: 100%;
+			top: 0px;
+		}
+		
+		.nav ul ul li {
+			width: 100px;
+			background: #eee;
+			text-align: center;
+		}
+		
+		.nav ul ul li:hover>ul {
+			visibility: visible;
+		}
+	</style>
+
+	<body>
+		<div class="nav">
+			<ul>
+				<li>
+					<a href="#">项目1</a>
+					<ul>
+						<li>
+							<a href="#">A1</a>
+							<ul>
+								<li>
+									<a href="#">A11</a>
+									<ul>
+										<li>
+											<a href="#">A111</a>
+										</li>
+										<li>
+											<a href="#">A112</a>
+											<ul>
+												<li>
+													<a href="#">A221</a>
+												</li>
+												<li>
+													<a href="#">A222</a>
+												</li>
+												<li>
+													<a href="#">A223</a>
+												</li>
+												<li>
+													<a href="#">A224</a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">A113</a>
+										</li>
+										<li>
+											<a href="#">A114</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">A22</a>
+								</li>
+								<li>
+									<a href="#">A33</a>
+								</li>
+								<li>
+									<a href="#">A44</a>
+									<ul>
+										<li>
+											<a href="#">A41</a>
+										</li>
+										<li>
+											<a href="#">A42</a>
+										</li>
+										<li>
+											<a href="#">A43</a>
+										</li>
+										<li>
+											<a href="#">A44</a>
+											<ul>
+												<li>
+													<a href="#">A441</a>
+												</li>
+												<li>
+													<a href="#">A442</a>
+												</li>
+												<li>
+													<a href="#">A443</a>
+												</li>
+												<li>
+													<a href="#">A444</a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">A2</a>
+						</li>
+						<li>
+							<a href="#">A3</a>
+						</li>
+						<li>
+							<a href="#">A4</a>
+						</li>
+						<li>
+							<a href="#">A5</a>
+						</li>
+						<li>
+							<a href="#">A6</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">项目2</a>
+					<ul>
+						<li>
+							<a href="#">B1</a>
+						</li>
+						<li>
+							<a href="#">B2</a>
+						</li>
+						<li>
+							<a href="#">B3</a>
+						</li>
+						<li>
+							<a href="#">B4</a>
+						</li>
+						<li>
+							<a href="#">B5</a>
+						</li>
+						<li>
+							<a href="#">B6</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">项目3</a>
+					<ul>
+						<li>
+							<a href="#">C1</a>
+						</li>
+						<li>
+							<a href="#">C2</a>
+						</li>
+						<li>
+							<a href="#">C3</a>
+						</li>
+						<li>
+							<a href="#">C4</a>
+						</li>
+						<li>
+							<a href="#">C5</a>
+						</li>
+						<li>
+							<a href="#">C6</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">项目4</a>
+					<ul>
+						<li>
+							<a href="#">D1</a>
+						</li>
+						<li>
+							<a href="#">D2</a>
+						</li>
+						<li>
+							<a href="#">D3</a>
+						</li>
+						<li>
+							<a href="#">D4</a>
+						</li>
+						<li>
+							<a href="#">D5</a>
+						</li>
+						<li>
+							<a href="#">D6</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">项目5</a>
+					<ul>
+						<li>
+							<a href="#">E1</a>
+						</li>
+						<li>
+							<a href="#">E2</a>
+						</li>
+						<li>
+							<a href="#">E3</a>
+						</li>
+						<li>
+							<a href="#">E4</a>
+						</li>
+						<li>
+							<a href="#">E5</a>
+						</li>
+						<li>
+							<a href="#">E6</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">项目6</a>
+					<ul>
+						<li>
+							<a href="#">F1</a>
+						</li>
+						<li>
+							<a href="#">F2</a>
+						</li>
+						<li>
+							<a href="#">F3</a>
+						</li>
+						<li>
+							<a href="#">F4</a>
+						</li>
+						<li>
+							<a href="#">F5</a>
+						</li>
+						<li>
+							<a href="#">F6</a>
+						</li>
+					</ul>
+				</li>
+
+			</ul>
+		</div>
+	</body>
+
+</html>
